@@ -6,4 +6,4 @@ Rodrigo's personal website
 I am working under the supervision of [Dr. Irene Gamba](https://web.ma.utexas.edu/users/gamba/).
 
 
-![My picture.](/photo.JPG)
+![Footer.](/RGB.svg)
