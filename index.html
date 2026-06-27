@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Rodrigo Gonzalez — The University of Texas at Austin</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAV
+       ============================================================ -->
+  <header>
+    <div class="container header-inner">
+      <div class="site-identity">
+        <span class="site-name">Rodrigo Gonzalez</span>
+        <span class="site-title">PhD Candidate · Computational Science and Engineering · Oden Institute, UT Austin</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#notes">Notes</a></li>
+          <li><a href="#cv">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-photo">
+          <!-- TODO: Replace assets/profile.jpg with your actual photo -->
+          <img src="assets/profile.jpg" alt="Photo of Rodrigo Gonzalez" />
+        </div>
+        <div class="about-text">
+          <h1>Rodrigo Gonzalez</h1>
+          <p class="about-role">PhD Candidate<br />Computational Science and Engineering<br />Oden Institute for Computational Engineering and Sciences<br />The University of Texas at Austin</p>
+
+          <!-- TODO: Replace with your bio -->
+          <p>
+            I am a PhD candidate at the Oden Institute for Computational Engineering and Sciences at The University of Texas at Austin working on
+            applied mathematics and computational physics. My work focuses on designing computationally efficient algorithms to simulate phenomena that arise in kinetic theory, plasma physics, and controlled fussion.
+            </p>
+          <p>
+            Previously, I completed a BS in Applied Mathematics at Emory University (2022).
+          </p>
+
+          <ul class="contact-links">
+            <!-- TODO: Fill in your actual email and links -->
+            <li><a href="mailto:rodrigogonzalez@utexas.edu">rodrigogonzalez@utexas.edu</a></li>
+            <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RESEARCH
+         ============================================================ -->
+    <section id="research" class="alt-bg">
+      <div class="container">
+        <h2>Research</h2>
+
+        <!-- TODO: Replace with your research statement -->
+        <p class="section-intro">
+          My research is broadly in computational kinetics and computational physics.
+          I am interested in developing and applying numerical methods to simulate kinetic
+          and plasma systems, with a particular focus on kinetic equations
+          and transport phenomena. The core of my work relies on
+          leveraging insights from the analytical and physical models to ensure accuracy and improve computational efficiency.
+        </p>
+
+        <div class="research-areas">
+
+          <div class="research-card">
+            <h3>Collision Operators</h3>
+            <p>
+              Numerical simulation of Boltzmann and Landau collision operators in both
+              classical and relativistic regimes. This work focuses on developing accurate
+              and efficient discretizations for collisional kinetic equations arising in
+              plasma and gas dynamics.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <h3>Low-Rank Methods for Vlasov–Poisson</h3>
+            <p>
+              Development of low-rank tensor methods to efficiently solve the Vlasov–Poisson
+              system, which describes the collisionless evolution of a plasma in phase space.
+              These methods exploit the structure of the distribution function to reduce
+              computational cost.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <h3>Heat Transport on Chaotic Magnetic Fields</h3>
+            <p>
+              Simulation of heat transport along and across chaotic magnetic field lines,
+              relevant to magnetic confinement fusion. This involves understanding how
+              field-line chaos affects energy confinement and transport in plasma devices.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PUBLICATIONS
+         ============================================================ -->
+    <section id="publications">
+      <div class="container">
+        <h2>Publications</h2>
+
+        <ul class="pub-list">
+
+          <li class="pub-item">
+            <span class="pub-title">A structure-preserving local discontinuous Galerkin method for the Fokker-Planck-Landau equation</span>
+            <span class="pub-authors">Kun Huang, Andrés Galindo-Olarte, Rodrigo González-Hernández, Irene M. Gamba</span>
+            <span class="pub-venue"><em>arXiv preprint</em>, 2025</span>
+            <span class="pub-links">
+              <a href="assets/LDG_FPL.pdf" target="_blank" rel="noopener">PDF</a>
+              <a href="https://arxiv.org/abs/2505.18321" target="_blank" rel="noopener">arXiv</a>
+            </span>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NOTES
+         ============================================================ -->
+    <section id="notes" class="alt-bg">
+      <div class="container">
+        <h2>Notes</h2>
+        <p class="section-intro">Informal write-ups on topics I find interesting. Use at your own risk.</p>
+
+        <ul class="notes-list">
+
+          <li class="note-item">
+            <div class="note-main">
+              <span class="note-title">A Toy Example for Numerical Stability of PDEs</span>
+              <p class="note-desc">A short illustrative example exploring numerical stability in the context of PDE discretizations.</p>
+            </div>
+            <a class="note-pdf" href="assets/numerical_stability_toy.pdf" target="_blank" rel="noopener">PDF</a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CV
+         ============================================================ -->
+    <section id="cv" class="alt-bg">
+      <div class="container">
+        <h2>CV</h2>
+        <p>
+          <!-- TODO: Replace assets/cv.pdf with your actual CV -->
+          A full CV is available for download: <a href="assets/cv.pdf" target="_blank">Download CV (PDF)</a>.
+        </p>
+
+        <div class="cv-highlights">
+          <div class="cv-block">
+            <h3>Education</h3>
+            <ul>
+              <li>
+                <strong>PhD, Computational Science and Engineering</strong>, The University of Texas at Austin, expected 2027<br />
+                Advisor: Irene Gamba · Co-Advisor: Diego Castillo Negrete<br />
+                Advanced to candidacy, 2024
+              </li>
+              <li>
+                <strong>MS, Computational Science and Engineering</strong>, The University of Texas at Austin, 2024
+              </li>
+              <li>
+                <strong>BS, Applied Mathematics</strong>, Emory University, 2022
+              </li>
+            </ul>
+          </div>
+
+          <div class="cv-block">
+            <h3>Experience</h3>
+            <ul>
+              <li>
+                <strong>Graduate Research Assistant</strong>, Los Alamos National Laboratory, May 2025 – May 2026
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="container">
+      <!-- TODO: Update year and email -->
+      <p>&copy; <span id="year"></span> Rodrigo Gonzalez · <a href="mailto:rodrigogonzalez@utexas.edu">rodrigogonzalez@utexas.edu</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

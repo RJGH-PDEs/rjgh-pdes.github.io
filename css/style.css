@@ -1,0 +1,426 @@
+/* ============================================================
+   BASE RESET & VARIABLES
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #fafafa;
+  --bg-alt:    #f0f2f5;
+  --text:      #1a1a1a;
+  --text-muted:#555;
+  --accent:    #4a6fa5;
+  --accent-hover: #3a5a8f;
+  --border:    #dde1e7;
+  --font:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --max-width: 820px;
+  --header-h:  64px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  font-weight: 600;
+}
+h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+h2 { font-size: 1.5rem; margin-bottom: 1.25rem; }
+h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+section {
+  padding: 4rem 0;
+}
+.alt-bg {
+  background: var(--bg-alt);
+}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  height: var(--header-h);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.site-identity {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.site-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+.site-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav ul a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+nav ul a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Hamburger button — hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 1;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  /* Shows a grey box if no image is present */
+  min-height: 180px;
+}
+
+.about-text h1 {
+  font-size: 1.75rem;
+}
+
+.about-role {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0.25rem 0 1rem;
+  line-height: 1.5;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.25rem;
+  padding: 0;
+}
+.contact-links li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ============================================================
+   RESEARCH SECTION
+   ============================================================ */
+.section-intro {
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.research-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.research-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+}
+.research-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   PUBLICATIONS SECTION
+   ============================================================ */
+.pub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.pub-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pub-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+}
+.pub-authors {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.pub-venue {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.pub-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+.pub-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1rem 0.6rem;
+  color: var(--accent);
+  transition: background 0.15s;
+}
+.pub-links a:hover {
+  background: var(--border);
+  text-decoration: none;
+}
+
+/* ============================================================
+   NOTES SECTION
+   ============================================================ */
+.notes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.note-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.note-item:last-child {
+  border-bottom: none;
+}
+
+.note-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.note-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.note-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.note-pdf {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1rem 0.6rem;
+  color: var(--accent);
+  transition: background 0.15s;
+  align-self: center;
+}
+.note-pdf:hover {
+  background: var(--border);
+  text-decoration: none;
+}
+
+/* ============================================================
+   CV SECTION
+   ============================================================ */
+.cv-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cv-block h3 {
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+.cv-block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.cv-block li {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+footer a {
+  color: var(--text-muted);
+}
+footer a:hover {
+  color: var(--accent);
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+@media (max-width: 640px) {
+  h1 { font-size: 1.5rem; }
+
+  /* Show hamburger, hide nav by default */
+  .nav-toggle {
+    display: flex;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+  }
+  nav.open {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  nav ul a {
+    font-size: 1rem;
+  }
+
+  /* Stack about section */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .about-photo img {
+    width: 140px;
+    min-height: 140px;
+  }
+
+  /* Research cards stack */
+  .research-areas {
+    grid-template-columns: 1fr;
+  }
+
+  /* CV highlights stack */
+  .cv-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 2.5rem 0;
+  }
+}
